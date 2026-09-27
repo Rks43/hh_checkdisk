@@ -1,0 +1,8 @@
+#!/bin/bash
+THRESHOLD=${THRESHOLD:-50} 
+echo "Disk usage check:"
+df -h | awk 'NR>1 {print $1, $5}' | sed 's/%//' | while read -r partition usage; do
+    if [ "$usage" -gt "$THRESHOLD" ]; then
+        echo "WARNING: $partition is at $usage%"
+    fi
+done
