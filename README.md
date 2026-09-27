@@ -11,21 +11,6 @@ Docker, docker-compose, bash, мониторинг, Ansible, CI/CD.
 - **Prometheus + Grafana + Node Exporter** — мониторинг и визуализация
 - **Ansible** — автоматизация настройки серверов
 - **GitHub Actions** — CI/CD
-## Структура проекта
-.
-├── case_one/
-│ ├── Dockerfile # Сборка образа с bash-скриптом
-│ ├── disk_check # Bash-скрипт проверки дисков
-│ └── docker-compose.yml # nginx + disk
-├── monitoring/
-│ ├── docker-compose.yml # Prometheus + Grafana + Node Exporter
-│ └── prometheus.yml # Конфигурация Prometheus
-├── ansible/
-│ └── playbook.yml # Установка nginx, копирование html, ufw
-└── .github/
-└── workflows/
-└── deploy.yml # CI/CD: деплой на сервер через SSH
-
 
 ## Что делает проект
 
